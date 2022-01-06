@@ -1,0 +1,10 @@
+
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+- Place the web service instance on the private network, install the bastion server on the public subnet, and set the inbound rule that allows only ssh from the bastion server.
+- Strengthen password rules with restrictions on length, expiration date, and character requirements
+- Forbid SSH login with password
+
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+The IAM role for S3 assigned to the Web service instance is set to Read only, and further limited to S3 for free recipes.

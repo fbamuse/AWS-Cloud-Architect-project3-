@@ -1,0 +1,14 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+	- In both instances , process 'sshd' is listening on TCP port 22 which is associated with 'SSH' and is reachable from the internet
+	- on Web Service Instance, Minimum length for passwords is not configured on instance
+	- In both instances, process 'systemd-network' is listening on UDP port 68 which is associated with 'DHCP' and is reachable from the internet
+	- Web Service Instance is configured to support password authentication over SSH. Password authentication is susceptible to brute-force attacks and should be disabled in favor of key-based authentication where possible.
+	- Web Service Instance is configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key. This increases the likelihood of a successful brute-force attack.
+	- No password complexity mechanism or restrictions are configured on Web Service Instance.
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+	- Place the web service instance on the private network, install the bastion server on the public subnet, and set the inbound rule that allows only ssh from the bastion server.
+	- Strengthen password rules with restrictions on length, expiration date, and character requirements
+	- Forbid SSH login with password

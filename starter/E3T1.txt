@@ -1,0 +1,7 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+GuardDuty has detected that the Attack Instance is performing an SSH brute force attack on the Web Service Instance.The attacker is warned as an Actor with a severity of "high".
+
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+This detection monitors VPC Flow logs and detects anomalies in the traffic on port 22.

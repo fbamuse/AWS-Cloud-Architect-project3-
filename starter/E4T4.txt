@@ -1,0 +1,13 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+Place the web service instance on the private network, install the bastion server on the public subnet, and set the inbound rule that allows only ssh from the bastion server.
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+By restricting access to S3 for secrets to access from the public subnet by the VPC endpoint, you can reduce the risk of attacking S3 for secrets even if the IAM of S3 is compromised.
+
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+After setting the encryption, only the newly saved data will be encrypted.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+As well as improving the vulnerability of web service instance, it makes secret data more secure.

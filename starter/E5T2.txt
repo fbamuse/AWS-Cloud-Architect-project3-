@@ -1,0 +1,85 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+	- CloudFormation
+		- Regula
+		- Cfripper
+		- Cloudsploit
+		- cfn-lint
+	- Terraform
+		- Chef inspec
+		- Regula
+		- Terrascan
+
+### Example vulnerability
+
+
+	regula https://regula.dev/rules.html
+	- IAM password policies should prevent reuse of previously used passwords
+	- IAM password policies should expire passwords within 90 days
+	- S3 bucket ACLs should not have public access on S3 buckets that store CloudTrail log files
+	- S3 buckets should have all block public access options enabled
+
+
+
+##Scan AMI’s or containers for OS vulnerabilities
+	Clair
+	Anchore
+	Dagda
+	Falco
+	Aqua Security
+	Docker Bench
+	Harbor
+
+### Example vulnerability
+	https://github.com/docker/docker-bench-security
+	2 - Docker daemon configuration
+	2.1 - Ensure network traffic is restricted between containers on the default bridge
+	2.2 - Ensure the logging level is set to 'info'
+	2.3 - Ensure Docker is allowed to make changes to iptables
+	2.4 - Ensure insecure registries are not used
+	2.5 - Ensure aufs storage driver is not used
+	2.6 - Ensure TLS authentication for Docker daemon is configured
+	2.7 - Ensure the default ulimit is configured appropriately
+	3 - Docker daemon configuration files
+	3.1 - Ensure that docker.service file ownership is set to root:root
+	3.2 - Ensure that docker.service file permissions are set to 644 or more restrictive
+	3.3 - Ensure that docker.socket file ownership is set to root:root
+	3.4 - Ensure that docker.socket file permissions are set to 644 or more restrictive
+	3.5 - Ensure that /etc/docker directory ownership is set to root:root
+	3.6 - Ensure that /etc/docker directory permissions are set to 755 or more restrictive
+	3.7 - Ensure that registry certificate file ownership is set to root:root
+	3.8 - Ensure that registry certificate file permissions are set to 444 or more restrictive
+	3.9 - Ensure that TLS CA certificate file ownership is set to root:root
+	3.10 - Ensure that TLS CA certificate file permissions are set to 444 or more restrictive
+	3.11 - Ensure that Docker server certificate file ownership is set to root:root
+	3.12 - Ensure that Docker server certificate file permissions are set to 444 or more restrictive
+	3.13 - Ensure that Docker server certificate key file ownership is set to root:root
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+
+	- AWS inspector
+
+### Example vulnerability
+	Amazon EC2 instances
+	Application Load Balancers
+	Direct Connect
+	Elastic Load Balancers
+	Elastic Network Interfaces
+	Internet Gateways (IGWs)
+	Network Access Control Lists (ACLs)
+	Route Tables
+	Security Groups (SGs)
+	Subnets
+	Virtual Private Clouds (VPCs)
+	Virtual Private Gateways (VGWs)
+	VPC peering connections
+	Disable root login over SSH
+	Support SSH version 2 only
+	Disable password authentication Over SSH
+	Configure password maximum age
+	Configure password minimum length
+	Configure password complexity
+	Enable ASLR
+	Enable DEP
+	Configure permissions for system directories

@@ -371,6 +371,7 @@ sudo service ssh restart
 **Deliverables**:
 - **E4T2_networksg.png** - Screenshot of the security group change.   
   ![](./screenshot/E4T2_networksg.png)
+  ![](2022-01-07-09-25-35.png)
 
 - **E4T2_sshattempt.png** - Screenshot of your SSH attempt.  
   ![](./screenshot/E4T2_sshattempt.png)
@@ -382,10 +383,9 @@ sudo service ssh restart
 
 **Deliverables:**
 - **E4T2_s3iampolicy.png** - Screenshot of the updated IAM policy.
-  ![](./screenshot/E4T2_s3iampolicy.png)
-- **E4T2_s3copy.png** - Screenshot of the failed copy attempt.
-  ![](./screenshot/E4T2_s3copy.png)
-
+  ![](./screenshot/E4T2_s3iampolicy.png)    
+- **E4T2_s3copy.png** - Screenshot of the failed copy attempt.  
+  ![](./screenshot/E4T2_s3copy.png)  
 #### Apply Default Server-side Encryption to the S3 Bucket
 
 This will cause the S3 service to encrypt any objects that are stored going forward by default.
@@ -412,6 +412,8 @@ Capture the screenshot of the secret recipes bucket showing that default encrypt
   ![](./screenshot/E4T3_config.png)
 - **E4T3_inspector.png** - Screenshot of Inspector after reevaluating the number of findings.
  ![](./screenshot/E4T3_inspector.png)
+
+
 
 ### Task 4: Questions and Analysis
 
